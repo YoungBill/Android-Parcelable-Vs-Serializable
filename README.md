@@ -9,8 +9,8 @@ A Sample for Android Parcelable-Vs-Serializable
 序列话的方式有两种，一种是实现Serializable接口，一种是实现Parceable接口。
 #### 实现要点
 1.实现Serializable接口
-这种序列化方式是Java提供的，它的优点是简单，其实Serializable接口是个空接口，因而我们并不需要实现什么抽象方法，但是我们却往往需要在类中声明一个静态变量标识（serialVersionUID），但这不是必须的，我们不声明，依然可以实现序列化，但是这样的话会对反序列化产生一定的影响，可能会在我们对类做了修改之后而造成对象的反序列化失败。
-2.实现Parceable接口
+<br/>这种序列化方式是Java提供的，它的优点是简单，其实Serializable接口是个空接口，因而我们并不需要实现什么抽象方法，但是我们却往往需要在类中声明一个静态变量标识（serialVersionUID），但这不是必须的，我们不声明，依然可以实现序列化，但是这样的话会对反序列化产生一定的影响，可能会在我们对类做了修改之后而造成对象的反序列化失败。
+<br/>2.实现Parceable接口
 <br/>需要实现三个东西：
 <br>1）writeToParcel 方法。该方法将类的数据写入外部提供的Parcel中.声明如下：
 <br>writeToParcel (Parcel dest, int flags) 具体参数含义见javadoc
